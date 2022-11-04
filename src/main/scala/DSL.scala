@@ -22,18 +22,10 @@ object DSL {
       println(s"$finalState yeye")
   }
 
-  case class FileTypeContainer(fileType: FileType) {
-    def from(s: String) = {
-      println("from")
-      Path(s)
-    }
-  }
-
   case class Copy() {
-    def images() = {
-      println("copy.images")
-      FileTypeContainer(FileType.Images)
-    }
+
+    def from(s: String) =
+      Path(s)
   }
 
   case class FinalState(order: SortingAlternative, source: Path, dest: Path)

@@ -5,5 +5,5 @@ object Main {
   val Copy = new Copy
 
   @main def run =
-    Copy images from source
+    Copy from source to dest sortBy date
 }
